@@ -12,10 +12,21 @@ namespace Be_connect.co.il
 {
     public partial class Form1 : Form
     {
+
+        private static Form1 _instance;
+
         public Form1()
         {
             InitializeComponent();
+            _instance = this;
         }
+
+        public string TextStatus
+        {
+            get { return label_State.Text; }
+            set { label_State.Text = value; }
+        }
+        public static Form1 Instance { get { return _instance; } }
 
         private void btn_Minimum_Click(object sender, EventArgs e)
         {
@@ -31,6 +42,9 @@ namespace Be_connect.co.il
         {
             bunifuSeparator.Width = btn_tab1.Width;
             bunifuSeparator.Left = btn_tab1.Left;
+
+            uC_LikePage1.Visible = false;
+            uC_Account1.Show();
         }
 
         private void btn_tab2_Click(object sender, EventArgs e)
@@ -43,6 +57,10 @@ namespace Be_connect.co.il
         {
             bunifuSeparator.Width = btn_tab3.Width;
             bunifuSeparator.Left = btn_tab3.Left;
+
+            uC_Account1.Visible = false;
+            uC_LikePage1.Show();
+
         }
 
         private void btn_tab4_Click(object sender, EventArgs e)

@@ -131,11 +131,11 @@
             this.bunifuCustomLabel2.AutoSize = true;
             this.bunifuCustomLabel2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.Red;
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(255, 388);
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(248, 387);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(304, 16);
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(318, 16);
             this.bunifuCustomLabel2.TabIndex = 124;
-            this.bunifuCustomLabel2.Text = "Please Input linkedin Account username and password";
+            this.bunifuCustomLabel2.Text = "Please Input Facebook Account username and password";
             // 
             // UC_Account
             // 

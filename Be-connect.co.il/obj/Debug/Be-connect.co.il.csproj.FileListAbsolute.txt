@@ -9,3 +9,6 @@ E:\Work\VC\Bot\Facebook\Be-connect.co.il\Be-connect.co.il\obj\Debug\Be-connect.c
 E:\Work\VC\Bot\Facebook\Be-connect.co.il\Be-connect.co.il\obj\Debug\Be-connect.co.il.pdb
 E:\Work\VC\Bot\Facebook\Be-connect.co.il\Be-connect.co.il\bin\Debug\Bunifu_UI_v1.52.dll
 E:\Work\VC\Bot\Facebook\Be-connect.co.il\Be-connect.co.il\obj\Debug\Be_connect.co.il.UC_Account.resources
+E:\Work\VC\Bot\Facebook\Be-connect.co.il\Be-connect.co.il\obj\Debug\Be_connect.co.il.UC_LikePage.resources
+E:\Work\VC\Bot\Facebook\Be-connect.co.il\Be-connect.co.il\bin\Debug\WebDriver.dll
+E:\Work\VC\Bot\Facebook\Be-connect.co.il\Be-connect.co.il\bin\Debug\WebDriver.xml

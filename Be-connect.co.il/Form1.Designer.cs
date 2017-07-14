@@ -45,6 +45,8 @@
             this.btn_tab1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuSeparator = new Bunifu.Framework.UI.BunifuSeparator();
             this.uC_Account1 = new Be_connect.co.il.UC_Account();
+            this.uC_LikePage1 = new Be_connect.co.il.UC_LikePage();
+            this.label_State = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel_Header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Minimum)).BeginInit();
@@ -60,6 +62,7 @@
             // panel_Header
             // 
             this.panel_Header.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(140)))), ((int)(((byte)(127)))));
+            this.panel_Header.Controls.Add(this.label_State);
             this.panel_Header.Controls.Add(this.LogoIcon);
             this.panel_Header.Controls.Add(this.bunifuCustomLabel1);
             this.panel_Header.Controls.Add(this.btn_Minimum);
@@ -219,23 +222,43 @@
             // 
             // uC_Account1
             // 
-            this.uC_Account1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uC_Account1.Dock = System.Windows.Forms.DockStyle.Top;
             this.uC_Account1.Location = new System.Drawing.Point(0, 75);
             this.uC_Account1.Name = "uC_Account1";
             this.uC_Account1.Size = new System.Drawing.Size(800, 525);
             this.uC_Account1.TabIndex = 2;
+            // 
+            // uC_LikePage1
+            // 
+            this.uC_LikePage1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.uC_LikePage1.Location = new System.Drawing.Point(0, 600);
+            this.uC_LikePage1.Name = "uC_LikePage1";
+            this.uC_LikePage1.Size = new System.Drawing.Size(800, 525);
+            this.uC_LikePage1.TabIndex = 3;
+            // 
+            // label_State
+            // 
+            this.label_State.AutoSize = true;
+            this.label_State.Font = new System.Drawing.Font("Century Gothic", 11F);
+            this.label_State.ForeColor = System.Drawing.Color.White;
+            this.label_State.Location = new System.Drawing.Point(231, 9);
+            this.label_State.Name = "label_State";
+            this.label_State.Size = new System.Drawing.Size(0, 20);
+            this.label_State.TabIndex = 14;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 600);
+            this.Controls.Add(this.uC_LikePage1);
             this.Controls.Add(this.uC_Account1);
             this.Controls.Add(this.panel_Tab);
             this.Controls.Add(this.panel_Header);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Be-connect.co.il.";
             this.panel_Header.ResumeLayout(false);
             this.panel_Header.PerformLayout();
@@ -264,7 +287,9 @@
         private Bunifu.Framework.UI.BunifuCustomLabel btn_tab5;
         private Bunifu.Framework.UI.BunifuCustomLabel btn_tab4;
         private Bunifu.Framework.UI.BunifuCustomLabel btn_tab3;
+        private UC_LikePage uC_LikePage1;
         private UC_Account uC_Account1;
+        private Bunifu.Framework.UI.BunifuCustomLabel label_State;
     }
 }
 

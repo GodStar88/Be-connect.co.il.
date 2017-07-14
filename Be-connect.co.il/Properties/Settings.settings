@@ -8,5 +8,11 @@
     <Setting Name="AccountPass" Type="System.String" Scope="User">
       <Value Profile="(Default)">password</Value>
     </Setting>
+    <Setting Name="LikePageUrl" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://www.facebook.com/homeownerwashere/</Value>
+    </Setting>
+    <Setting Name="Setting" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>
