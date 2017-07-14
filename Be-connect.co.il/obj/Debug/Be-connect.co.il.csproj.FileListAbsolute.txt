@@ -1,0 +1,9 @@
+E:\Work\VC\Bot\Facebook\Be-connect.co.il\Be-connect.co.il\bin\Debug\Be-connect.co.il.exe.config
+E:\Work\VC\Bot\Facebook\Be-connect.co.il\Be-connect.co.il\bin\Debug\Be-connect.co.il.exe
+E:\Work\VC\Bot\Facebook\Be-connect.co.il\Be-connect.co.il\bin\Debug\Be-connect.co.il.pdb
+E:\Work\VC\Bot\Facebook\Be-connect.co.il\Be-connect.co.il\obj\Debug\Be-connect.co.il.csprojResolveAssemblyReference.cache
+E:\Work\VC\Bot\Facebook\Be-connect.co.il\Be-connect.co.il\obj\Debug\Be_connect.co.il.Form1.resources
+E:\Work\VC\Bot\Facebook\Be-connect.co.il\Be-connect.co.il\obj\Debug\Be_connect.co.il.Properties.Resources.resources
+E:\Work\VC\Bot\Facebook\Be-connect.co.il\Be-connect.co.il\obj\Debug\Be-connect.co.il.csproj.GenerateResource.Cache
+E:\Work\VC\Bot\Facebook\Be-connect.co.il\Be-connect.co.il\obj\Debug\Be-connect.co.il.exe
+E:\Work\VC\Bot\Facebook\Be-connect.co.il\Be-connect.co.il\obj\Debug\Be-connect.co.il.pdb
