@@ -23,5 +23,8 @@
     <Setting Name="writePost" Type="System.String" Scope="User">
       <Value Profile="(Default)">Hi</Value>
     </Setting>
+    <Setting Name="EventUrl" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://www.facebook.com/groups/1559865257645060/events/</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -250,5 +250,64 @@ namespace Be_connect.co.il
             new CFormControl().FormText("Success");
             System.Threading.Thread.Sleep(3000);
         }
+        //join event
+        public void joinEvent(IWebDriver driver)
+        {
+            try
+            {
+                var buttons = driver.FindElements(By.XPath("//span[@class='_2yav']"));
+                foreach (var item in buttons)
+                {
+                    if (item.Text == "Events")
+                    {
+                        item.Click();
+                        break;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+            }
+            System.Threading.Thread.Sleep(3000);
+            int index = 1;
+            int check = 0;
+            for (int i = 0; i < 1000; i++)
+            {
+                try
+                {
+
+                    string name = driver.FindElement(By.XPath("(//div[@class='uiProfileBlockContent'])[" + index.ToString() + "]")).Text;
+                    new CFormControl().FormText("Attending events");
+                    var buttons = driver.FindElements(By.XPath("(//div[@class='uiProfileBlockContent'])[" + index.ToString() + "]//a[@class='_42ft _4jy0 fbEventClassicButton _4jy3 _517h _51sy']"));
+                    index++;
+                    check = i;
+                    foreach (var button in buttons)
+                    {
+                        if (button.Text == "Join" || button.Text == "Going")
+                        {
+                            button.Click();
+                            System.Threading.Thread.Sleep(4000);
+                        }
+                    }
+                    new CFormControl().FormText("");
+                }
+                catch (Exception)
+                {
+                    try
+                    {
+                        driver.FindElement(By.XPath("//a[@class='pam uiBoxLightblue uiMorePagerPrimary']")).Click();
+                        System.Threading.Thread.Sleep(2000);
+                    }
+                    catch (Exception)
+                    {
+                    }
+                    if (check + 10 == i) break;
+                }
+            }
+            driver.Navigate().Refresh();
+            new CFormControl().FormText("Success");
+            System.Threading.Thread.Sleep(3000);
+        }
+
     }
 }

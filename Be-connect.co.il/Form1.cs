@@ -42,7 +42,7 @@ namespace Be_connect.co.il
         {
             bunifuSeparator.Width = btn_tab1.Width;
             bunifuSeparator.Left = btn_tab1.Left;
-
+            uC_Event1.Visible = false;
             uC_LikePage1.Visible = false;
             uC_Post1.Visible = false;
             uC_Account1.Show();
@@ -58,7 +58,7 @@ namespace Be_connect.co.il
         {
             bunifuSeparator.Width = btn_tab3.Width;
             bunifuSeparator.Left = btn_tab3.Left;
-
+            uC_Event1.Visible = false;
             uC_Account1.Visible = false;
             uC_Post1.Visible = false;
             uC_LikePage1.Show();
@@ -69,6 +69,10 @@ namespace Be_connect.co.il
         {
             bunifuSeparator.Width = btn_tab4.Width;
             bunifuSeparator.Left = btn_tab4.Left;
+            uC_Account1.Visible = false;
+            uC_LikePage1.Visible = false;
+            uC_Post1.Visible = false;
+            uC_Event1.Show();
         }
 
         private void btn_tab5_Click(object sender, EventArgs e)
@@ -77,6 +81,7 @@ namespace Be_connect.co.il
             bunifuSeparator.Left = btn_tab5.Left;
             uC_Account1.Visible = false;
             uC_LikePage1.Visible = false;
+            uC_Event1.Visible = false;
             uC_Post1.Show();
         }
     }

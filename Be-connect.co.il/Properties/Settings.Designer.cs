@@ -106,5 +106,17 @@ namespace Be_connect.co.il.Properties {
                 this["writePost"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://www.facebook.com/groups/1559865257645060/events/")]
+        public string EventUrl {
+            get {
+                return ((string)(this["EventUrl"]));
+            }
+            set {
+                this["EventUrl"] = value;
+            }
+        }
     }
 }
