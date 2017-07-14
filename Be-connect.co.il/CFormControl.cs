@@ -16,7 +16,7 @@ namespace Be_connect.co.il
 
         public void FormText(string str)
         {
-            Form1.Instance.TextStatus = str;
+            try { Form1.Instance.TextStatus = str; } catch (Exception) { }
         }
     }
 }

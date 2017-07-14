@@ -41,6 +41,10 @@
     <Reference Include="Bunifu_UI_v1.52">
       <HintPath>..\..\..\..\bunifu\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
+    <Reference Include="Interop.WMPLib">
+      <HintPath>..\..\FaceBook\CAG\CAG\Interop.WMPLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -80,6 +84,12 @@
     <Compile Include="UC_LikePage.Designer.cs">
       <DependentUpon>UC_LikePage.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_Post.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Post.Designer.cs">
+      <DependentUpon>UC_Post.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -97,6 +107,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_LikePage.resx">
       <DependentUpon>UC_LikePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Post.resx">
+      <DependentUpon>UC_Post.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel_Header = new System.Windows.Forms.Panel();
+            this.label_State = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.LogoIcon = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btn_Minimum = new Bunifu.Framework.UI.BunifuImageButton();
@@ -44,9 +45,9 @@
             this.btn_tab2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btn_tab1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuSeparator = new Bunifu.Framework.UI.BunifuSeparator();
-            this.uC_Account1 = new Be_connect.co.il.UC_Account();
             this.uC_LikePage1 = new Be_connect.co.il.UC_LikePage();
-            this.label_State = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.uC_Account1 = new Be_connect.co.il.UC_Account();
+            this.uC_Post1 = new Be_connect.co.il.UC_Post();
             this.panel_Header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Minimum)).BeginInit();
@@ -72,6 +73,16 @@
             this.panel_Header.Name = "panel_Header";
             this.panel_Header.Size = new System.Drawing.Size(800, 40);
             this.panel_Header.TabIndex = 0;
+            // 
+            // label_State
+            // 
+            this.label_State.AutoSize = true;
+            this.label_State.Font = new System.Drawing.Font("Century Gothic", 11F);
+            this.label_State.ForeColor = System.Drawing.Color.White;
+            this.label_State.Location = new System.Drawing.Point(231, 9);
+            this.label_State.Name = "label_State";
+            this.label_State.Size = new System.Drawing.Size(0, 20);
+            this.label_State.TabIndex = 14;
             // 
             // LogoIcon
             // 
@@ -220,14 +231,6 @@
             this.bunifuSeparator.Transparency = 255;
             this.bunifuSeparator.Vertical = false;
             // 
-            // uC_Account1
-            // 
-            this.uC_Account1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.uC_Account1.Location = new System.Drawing.Point(0, 75);
-            this.uC_Account1.Name = "uC_Account1";
-            this.uC_Account1.Size = new System.Drawing.Size(800, 525);
-            this.uC_Account1.TabIndex = 2;
-            // 
             // uC_LikePage1
             // 
             this.uC_LikePage1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -236,21 +239,28 @@
             this.uC_LikePage1.Size = new System.Drawing.Size(800, 525);
             this.uC_LikePage1.TabIndex = 3;
             // 
-            // label_State
+            // uC_Account1
             // 
-            this.label_State.AutoSize = true;
-            this.label_State.Font = new System.Drawing.Font("Century Gothic", 11F);
-            this.label_State.ForeColor = System.Drawing.Color.White;
-            this.label_State.Location = new System.Drawing.Point(231, 9);
-            this.label_State.Name = "label_State";
-            this.label_State.Size = new System.Drawing.Size(0, 20);
-            this.label_State.TabIndex = 14;
+            this.uC_Account1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.uC_Account1.Location = new System.Drawing.Point(0, 75);
+            this.uC_Account1.Name = "uC_Account1";
+            this.uC_Account1.Size = new System.Drawing.Size(800, 525);
+            this.uC_Account1.TabIndex = 2;
+            // 
+            // uC_Post1
+            // 
+            this.uC_Post1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.uC_Post1.Location = new System.Drawing.Point(0, 1125);
+            this.uC_Post1.Name = "uC_Post1";
+            this.uC_Post1.Size = new System.Drawing.Size(800, 525);
+            this.uC_Post1.TabIndex = 4;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 600);
+            this.Controls.Add(this.uC_Post1);
             this.Controls.Add(this.uC_LikePage1);
             this.Controls.Add(this.uC_Account1);
             this.Controls.Add(this.panel_Tab);
@@ -290,6 +300,7 @@
         private UC_LikePage uC_LikePage1;
         private UC_Account uC_Account1;
         private Bunifu.Framework.UI.BunifuCustomLabel label_State;
+        private UC_Post uC_Post1;
     }
 }
 

@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using Be_connect.co.il.Properties;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System;
 using System.Collections.Generic;
@@ -83,6 +84,171 @@ namespace Be_connect.co.il
             {
             }
             System.Threading.Thread.Sleep(5000);
+        }
+        // Post in group
+        public void groupPost(IWebDriver postDriver, string write)
+        {
+            try
+            {
+                var buttons = postDriver.FindElements(By.XPath("//span[@class='_2yav']"));
+                foreach (var item in buttons)
+                {
+                    if (item.Text == "Discussion")
+                    {
+                        item.Click();
+                        break;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+            }
+            System.Threading.Thread.Sleep(500);
+            // click 'Write Post' and input post text
+            try
+            {
+                postDriver.FindElement(By.XPath("//a[@data-tooltip-content='Write Post']")).Click();
+                System.Threading.Thread.Sleep(500);
+            }
+            catch (Exception) { }
+            try
+            {
+                postDriver.FindElement(By.XPath("//a[@data-tooltip-content='Write Post']")).Click();
+                System.Threading.Thread.Sleep(8000);
+            }
+            catch (Exception) { }
+            try
+            {
+                postDriver.FindElement(By.XPath("//div[@class='notranslate _5rpu']")).SendKeys(Environment.NewLine + write);
+                System.Threading.Thread.Sleep(1000);
+            }
+            catch (Exception)
+            {
+                try
+                {
+                    System.Threading.Thread.Sleep(1000);
+                    postDriver.FindElement(By.XPath("//div[@data-testid='status-attachment-mentions-input']")).Click();
+                    System.Threading.Thread.Sleep(1000);
+                    postDriver.FindElement(By.XPath("//div[@data-testid='status-attachment-mentions-input']")).SendKeys(Environment.NewLine + write);
+                    System.Threading.Thread.Sleep(3000);
+                }
+                catch (Exception)
+                {
+                }
+            }
+
+            // upload image   
+            try
+            {
+                IWebElement fileUpload = postDriver.FindElement(By.XPath("//input[@data-testid='media-sprout']"));
+                System.Threading.Thread.Sleep(1000);
+                fileUpload.SendKeys(Settings.Default["imageList"].ToString());
+                while (true)
+                {
+                    try { fileUpload = postDriver.FindElement(By.XPath("//input[@data-testid='media-sprout']")); } catch (Exception) { }
+                    System.Threading.Thread.Sleep(500);
+                    break;
+                }
+            }
+            catch (Exception) { }
+
+            // post button click
+            int count = 0;
+            while (true)
+            {
+                if (count > 20) break;
+                try
+                {
+                    System.Threading.Thread.Sleep(2000);
+                    postDriver.FindElement(By.XPath("//button[@class = '_1mf7 _4jy0 _4jy3 _4jy1 _51sy selected _42ft']")).Click();
+                    System.Threading.Thread.Sleep(3000);
+                    break;
+                }
+                catch (Exception)
+                {
+                    count++;
+                }
+                System.Threading.Thread.Sleep(3000);
+            }
+            new CFormControl().FormText("Success");
+            System.Threading.Thread.Sleep(3000);
+        }
+        // Post in page
+        public void pagePost(IWebDriver postDriver, string write)
+        {
+            try
+            {
+                var buttons = postDriver.FindElements(By.XPath("//span[@class='_2yav']"));
+                foreach (var item in buttons)
+                {
+                    if (item.Text == "Posts")
+                    {
+                        item.Click();
+                        break;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+            }
+            System.Threading.Thread.Sleep(3000);
+            // click 'Write Post' and input post text
+
+            try
+            {
+                postDriver.FindElement(By.XPath("(//span[@class='_5qtp'])[2]")).Click();
+                System.Threading.Thread.Sleep(10000);
+            }
+            catch (Exception) { }
+            try
+            {
+                postDriver.FindElement(By.XPath("//div[@class='_5yk2']")).Click();
+                System.Threading.Thread.Sleep(2000);
+            }
+            catch (Exception) { }
+            try
+            {
+                postDriver.FindElement(By.XPath("//div[@class='_5yk2']")).SendKeys(Environment.NewLine + write);
+                System.Threading.Thread.Sleep(1000);
+            }
+            catch (Exception)
+            {
+            }
+            // upload image   
+            try
+            {
+                IWebElement fileUpload = postDriver.FindElement(By.XPath("//input[@data-testid='add-more-photos']"));
+                System.Threading.Thread.Sleep(1000);
+                fileUpload.SendKeys(Settings.Default["imageList"].ToString());
+                while (true)
+                {
+                    try { fileUpload = postDriver.FindElement(By.XPath("//input[@data-testid='add-more-photos']")); } catch (Exception) { }
+                    System.Threading.Thread.Sleep(500);
+                    break;
+                }
+            }
+            catch (Exception) { }
+
+            // post button click
+            int count = 0;
+            while (true)
+            {
+                if (count > 20) break;
+                try
+                {
+                    System.Threading.Thread.Sleep(2000);
+                    postDriver.FindElement(By.XPath("//button[@class = '_1mf7 _4jy0 _4jy3 _4jy1 _51sy selected _42ft']")).Click();
+                    System.Threading.Thread.Sleep(3000);
+                    break;
+                }
+                catch (Exception)
+                {
+                    count++;
+                }
+                System.Threading.Thread.Sleep(3000);
+            }
+            new CFormControl().FormText("Success");
+            System.Threading.Thread.Sleep(3000);
         }
     }
 }

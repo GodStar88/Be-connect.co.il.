@@ -44,6 +44,7 @@ namespace Be_connect.co.il
             bunifuSeparator.Left = btn_tab1.Left;
 
             uC_LikePage1.Visible = false;
+            uC_Post1.Visible = false;
             uC_Account1.Show();
         }
 
@@ -59,6 +60,7 @@ namespace Be_connect.co.il
             bunifuSeparator.Left = btn_tab3.Left;
 
             uC_Account1.Visible = false;
+            uC_Post1.Visible = false;
             uC_LikePage1.Show();
 
         }
@@ -73,6 +75,9 @@ namespace Be_connect.co.il
         {
             bunifuSeparator.Width = btn_tab5.Width;
             bunifuSeparator.Left = btn_tab5.Left;
+            uC_Account1.Visible = false;
+            uC_LikePage1.Visible = false;
+            uC_Post1.Show();
         }
     }
 }

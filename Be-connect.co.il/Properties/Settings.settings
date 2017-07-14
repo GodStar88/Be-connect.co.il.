@@ -11,8 +11,17 @@
     <Setting Name="LikePageUrl" Type="System.String" Scope="User">
       <Value Profile="(Default)">https://www.facebook.com/homeownerwashere/</Value>
     </Setting>
-    <Setting Name="Setting" Type="System.String" Scope="User">
+    <Setting Name="PoatUrl" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://www.facebook.com/homeownerwashere/</Value>
+    </Setting>
+    <Setting Name="imageList" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="photoFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">c://</Value>
+    </Setting>
+    <Setting Name="writePost" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Hi</Value>
     </Setting>
   </Settings>
 </SettingsFile>

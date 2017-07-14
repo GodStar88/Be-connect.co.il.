@@ -61,13 +61,49 @@ namespace Be_connect.co.il.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string Setting {
+        [global::System.Configuration.DefaultSettingValueAttribute("https://www.facebook.com/homeownerwashere/")]
+        public string PoatUrl {
             get {
-                return ((string)(this["Setting"]));
+                return ((string)(this["PoatUrl"]));
             }
             set {
-                this["Setting"] = value;
+                this["PoatUrl"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string imageList {
+            get {
+                return ((string)(this["imageList"]));
+            }
+            set {
+                this["imageList"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("c://")]
+        public string photoFile {
+            get {
+                return ((string)(this["photoFile"]));
+            }
+            set {
+                this["photoFile"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Hi")]
+        public string writePost {
+            get {
+                return ((string)(this["writePost"]));
+            }
+            set {
+                this["writePost"] = value;
             }
         }
     }
