@@ -118,5 +118,29 @@ namespace Be_connect.co.il.Properties {
                 this["EventUrl"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://www.facebook.com/groups/1559865257645060/")]
+        public string LikePostUrl {
+            get {
+                return ((string)(this["LikePostUrl"]));
+            }
+            set {
+                this["LikePostUrl"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string commentText {
+            get {
+                return ((string)(this["commentText"]));
+            }
+            set {
+                this["commentText"] = value;
+            }
+        }
     }
 }

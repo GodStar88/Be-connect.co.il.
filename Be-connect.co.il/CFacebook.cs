@@ -250,24 +250,11 @@ namespace Be_connect.co.il
             new CFormControl().FormText("Success");
             System.Threading.Thread.Sleep(3000);
         }
-        //join event
+        // join event
         public void joinEvent(IWebDriver driver)
         {
-            try
-            {
-                var buttons = driver.FindElements(By.XPath("//span[@class='_2yav']"));
-                foreach (var item in buttons)
-                {
-                    if (item.Text == "Events")
-                    {
-                        item.Click();
-                        break;
-                    }
-                }
-            }
-            catch (Exception)
-            {
-            }
+            buttonClick(driver, "//span[@class='_2yav']", "Events");
+            System.Threading.Thread.Sleep(3000);
             System.Threading.Thread.Sleep(3000);
             int index = 1;
             int check = 0;
@@ -308,6 +295,92 @@ namespace Be_connect.co.il
             new CFormControl().FormText("Success");
             System.Threading.Thread.Sleep(3000);
         }
+        // Like comments
+        public void likeComments(IWebDriver driver, string msg)
+        {
+            buttonClick(driver, "//span[@class='_2yav']", "Discussion");
+            System.Threading.Thread.Sleep(3000);
 
+            int index = 1;
+            int check = 0;
+            for (int i = 0; i < 10000; i++)
+            {
+                try
+                {
+                    var element = driver.FindElement(By.XPath("(//div[@class='_4-u2 mbm _4mrt _5jmm _5pat _5v3q _4-u8'])[" + index.ToString() + "]"));
+                    buttonClick(driver, "(//div[@class='_4-u2 mbm _4mrt _5jmm _5pat _5v3q _4-u8'])[" + index.ToString() + "]//a[@class='UFILikeLink _4x9- _4x9_ _48-k']", "Like");
+
+                    buttonClick(driver, "(//div[@class='_4-u2 mbm _4mrt _5jmm _5pat _5v3q _4-u8'])[" + index.ToString() + "]//a[@class='comment_link _5yxe']", "Comment");
+
+
+                    try
+                    {
+                        var textarea = driver.FindElements(By.XPath("//div[@class='_4-u2 mbm _4mrt _5jmm _5pat _5v3q _4-u8'])[" + index.ToString() + "]//div[@class='_5yk2']"));
+                        textarea[0].SendKeys(msg);
+                        System.Threading.Thread.Sleep(500);
+                        textarea[0].SendKeys(Keys.Enter);
+                    }
+                    catch (Exception)
+                    {
+                    }
+
+                    buttonClick(driver, "(//div[@class='_4-u2 mbm _4mrt _5jmm _5pat _5v3q _4-u8'])[" + index.ToString() + "]//a[@class='UFIPagerLink']", "more comments");
+                    System.Threading.Thread.Sleep(3000);
+                    buttonClickAll(driver, "(//div[@class='_4-u2 mbm _4mrt _5jmm _5pat _5v3q _4-u8'])[" + index.ToString() + "]//a[@class='UFILikeLink UFIReactionLink']", "Like");
+                    index++;
+                    check = i;
+                }
+                catch (Exception)
+                {
+                    if (check + 5 == i) break;
+                    pageDown(driver);
+                }
+            }            
+        }
+
+
+        public void buttonClick(IWebDriver driver, string element, string txt)
+        {
+            try
+            {
+                var buttons = driver.FindElements(By.XPath(element));
+                foreach (var item in buttons)
+                {
+                    if (item.Text.Contains(txt))
+                    {
+                        item.Click();
+                        break;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+            }
+            System.Threading.Thread.Sleep(500);
+        }
+        public void buttonClickAll(IWebDriver driver, string element, string txt)
+        {
+            try
+            {
+                var buttons = driver.FindElements(By.XPath(element));
+                foreach (var item in buttons)
+                {
+                    if (item.Text.Contains(txt))
+                    {
+                        item.Click();
+                        System.Threading.Thread.Sleep(500);
+                    }
+                }
+            }
+            catch (Exception)
+            {
+            }            
+        }
+        public void pageDown(IWebDriver driver)
+        {
+            IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
+            js.ExecuteScript("window.scrollTo(0, document.body.scrollHeight);");
+            System.Threading.Thread.Sleep(1000);
+        } 
     }
 }

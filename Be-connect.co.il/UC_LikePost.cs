@@ -8,39 +8,40 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Be_connect.co.il.Properties;
-using OpenQA.Selenium;
 using System.Threading;
+using OpenQA.Selenium;
 
 namespace Be_connect.co.il
 {
-    public partial class UC_LikePage : UserControl
+    public partial class UC_LikePost : UserControl
     {
-
-        ThreadStart likePageThread;
-        Thread likePageThread_Thread;
-        IWebDriver navigator;
-
-        public UC_LikePage()
+        public UC_LikePost()
         {
             InitializeComponent();
         }
-
-        private void LikePageUrl_OnValueChanged(object sender, EventArgs e)
+        ThreadStart likePostThread;
+        Thread likePostThread_Thread;
+        IWebDriver navigator;
+        private void LikePostUrl_OnValueChanged(object sender, EventArgs e)
         {
-            Settings.Default["LikePageUrl"] = LikePageUrl.Text;
+            Settings.Default["LikePostUrl"] = LikePostUrl.Text;
             Settings.Default.Save();
         }
 
-        private void UC_LikePage_Load(object sender, EventArgs e)
+        private void commentText_TextChanged(object sender, EventArgs e)
         {
-            LikePageUrl.Text = Settings.Default["LikePageUrl"].ToString();
+            Settings.Default["commentText"] = commentText.Text;
+            Settings.Default.Save();
         }
-
+        private void UC_LikePost_Load(object sender, EventArgs e)
+        {
+            LikePostUrl.Text = Settings.Default["LikePostUrl"].ToString();
+        }
         private void btn_Start_Click(object sender, EventArgs e)
         {
-            likePageThread = new ThreadStart(likePageThreadStart);
-            likePageThread_Thread = new Thread(likePageThread);
-            likePageThread_Thread.Start();            
+            likePostThread = new ThreadStart(likePostThreadStart);
+            likePostThread_Thread = new Thread(likePostThread);
+            likePostThread_Thread.Start();
             btn_Start.Enabled = false;
             btn_Stop.Enabled = true;
         }
@@ -49,16 +50,15 @@ namespace Be_connect.co.il
         {
             Stop();
         }
-
         public void Stop()
         {
             btn_Start.Enabled = true;
             btn_Stop.Enabled = false;
             try { navigator.Quit(); } catch (Exception) { }
-            try { likePageThread_Thread.Abort(); } catch (Exception) { }
+            try { likePostThread_Thread.Abort(); } catch (Exception) { }
             new CFormControl().FormText("");
         }
-        private void likePageThreadStart()
+        public void likePostThreadStart()
         {
             CFacebook fb = new CFacebook();
             CFormControl fc = new CFormControl();
@@ -66,12 +66,14 @@ namespace Be_connect.co.il
             navigator = fb.googleChrome();
             fc.FormText("Login Facebook");
             fb.facebookLogin(navigator, UC_Account.Instance.username, UC_Account.Instance.userpass);
-            fc.FormText("Go to Page");
-            fb.gotoUrl(navigator, LikePageUrl.Text);
-            fc.FormText("Liking Page");
-            fb.likePage(navigator);
             fc.FormText("");
-            Stop();
+            fb.gotoUrl(navigator, LikePostUrl.Text);
+            fc.FormText("Liking post");
+            fb.likeComments(navigator, commentText.Text);
+            fc.FormText("");
+            //Stop();
         }
+
+
     }
 }

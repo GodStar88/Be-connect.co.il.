@@ -49,6 +49,7 @@
             this.uC_LikePage1 = new Be_connect.co.il.UC_LikePage();
             this.uC_Account1 = new Be_connect.co.il.UC_Account();
             this.uC_Event1 = new Be_connect.co.il.UC_Event();
+            this.uC_LikePost1 = new Be_connect.co.il.UC_LikePost();
             this.panel_Header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Minimum)).BeginInit();
@@ -255,6 +256,8 @@
             this.uC_Account1.Name = "uC_Account1";
             this.uC_Account1.Size = new System.Drawing.Size(800, 525);
             this.uC_Account1.TabIndex = 2;
+            this.uC_Account1.username = "";
+            this.uC_Account1.userpass = "";
             // 
             // uC_Event1
             // 
@@ -264,11 +267,20 @@
             this.uC_Event1.Size = new System.Drawing.Size(800, 525);
             this.uC_Event1.TabIndex = 5;
             // 
+            // uC_LikePost1
+            // 
+            this.uC_LikePost1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.uC_LikePost1.Location = new System.Drawing.Point(0, 2175);
+            this.uC_LikePost1.Name = "uC_LikePost1";
+            this.uC_LikePost1.Size = new System.Drawing.Size(800, 525);
+            this.uC_LikePost1.TabIndex = 6;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 600);
+            this.Controls.Add(this.uC_LikePost1);
             this.Controls.Add(this.uC_Event1);
             this.Controls.Add(this.uC_Post1);
             this.Controls.Add(this.uC_LikePage1);
@@ -312,6 +324,7 @@
         private Bunifu.Framework.UI.BunifuCustomLabel label_State;
         private UC_Post uC_Post1;
         private UC_Event uC_Event1;
+        private UC_LikePost uC_LikePost1;
     }
 }
 

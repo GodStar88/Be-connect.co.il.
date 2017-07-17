@@ -14,3 +14,4 @@ E:\Work\VC\Bot\Facebook\Be-connect.co.il\Be-connect.co.il\bin\Debug\WebDriver.dl
 E:\Work\VC\Bot\Facebook\Be-connect.co.il\Be-connect.co.il\bin\Debug\WebDriver.xml
 E:\Work\VC\Bot\Facebook\Be-connect.co.il\Be-connect.co.il\obj\Debug\Be_connect.co.il.UC_Post.resources
 E:\Work\VC\Bot\Facebook\Be-connect.co.il\Be-connect.co.il\obj\Debug\Be_connect.co.il.UC_Event.resources
+E:\Work\VC\Bot\Facebook\Be-connect.co.il\Be-connect.co.il\obj\Debug\Be_connect.co.il.UC_LikePost.resources

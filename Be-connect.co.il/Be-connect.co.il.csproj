@@ -90,6 +90,12 @@
     <Compile Include="UC_LikePage.Designer.cs">
       <DependentUpon>UC_LikePage.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_LikePost.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_LikePost.Designer.cs">
+      <DependentUpon>UC_LikePost.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_Post.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -116,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_LikePage.resx">
       <DependentUpon>UC_LikePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_LikePost.resx">
+      <DependentUpon>UC_LikePost.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Post.resx">
       <DependentUpon>UC_Post.cs</DependentUpon>

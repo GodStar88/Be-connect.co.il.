@@ -26,5 +26,11 @@
     <Setting Name="EventUrl" Type="System.String" Scope="User">
       <Value Profile="(Default)">https://www.facebook.com/groups/1559865257645060/events/</Value>
     </Setting>
+    <Setting Name="LikePostUrl" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://www.facebook.com/groups/1559865257645060/</Value>
+    </Setting>
+    <Setting Name="commentText" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>
