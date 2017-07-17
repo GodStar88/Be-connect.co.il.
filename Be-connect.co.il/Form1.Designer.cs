@@ -256,8 +256,6 @@
             this.uC_Account1.Name = "uC_Account1";
             this.uC_Account1.Size = new System.Drawing.Size(800, 525);
             this.uC_Account1.TabIndex = 2;
-            this.uC_Account1.username = "";
-            this.uC_Account1.userpass = "";
             // 
             // uC_Event1
             // 

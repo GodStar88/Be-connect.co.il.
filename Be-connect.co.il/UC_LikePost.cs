@@ -36,6 +36,7 @@ namespace Be_connect.co.il
         private void UC_LikePost_Load(object sender, EventArgs e)
         {
             LikePostUrl.Text = Settings.Default["LikePostUrl"].ToString();
+            commentText.Text = Settings.Default["commentText"].ToString();
         }
         private void btn_Start_Click(object sender, EventArgs e)
         {

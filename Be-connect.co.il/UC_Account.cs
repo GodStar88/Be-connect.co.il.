@@ -47,6 +47,9 @@ namespace Be_connect.co.il
         {
             AccountName.Text = Settings.Default["AccountName"].ToString();
             AccountPass.Text = Settings.Default["AccountPass"].ToString();
+
+            CKey ck = new CKey();
+            if (!ck.keyCheck()) Application.Exit();
         }
     }
 }

@@ -315,7 +315,7 @@ namespace Be_connect.co.il
 
                     try
                     {
-                        var textarea = driver.FindElements(By.XPath("//div[@class='_4-u2 mbm _4mrt _5jmm _5pat _5v3q _4-u8'])[" + index.ToString() + "]//div[@class='_5yk2']"));
+                        var textarea = driver.FindElements(By.XPath("(//div[@class='_4-u2 mbm _4mrt _5jmm _5pat _5v3q _4-u8'])[" + index.ToString() + "]//div[@class='_5yk2']"));
                         textarea[0].SendKeys(msg);
                         System.Threading.Thread.Sleep(500);
                         textarea[0].SendKeys(Keys.Enter);
@@ -337,8 +337,6 @@ namespace Be_connect.co.il
                 }
             }            
         }
-
-
         public void buttonClick(IWebDriver driver, string element, string txt)
         {
             try

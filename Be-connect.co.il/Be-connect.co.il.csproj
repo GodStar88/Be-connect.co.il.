@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="CFacebook.cs" />
     <Compile Include="CFormControl.cs" />
+    <Compile Include="CKey.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +130,7 @@
     <EmbeddedResource Include="UC_Post.resx">
       <DependentUpon>UC_Post.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
