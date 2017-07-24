@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Be_connect.co.il
@@ -44,6 +45,26 @@ namespace Be_connect.co.il
             catch (Exception)
             {
             }
+        }
+
+        public void facebookLogout(IWebDriver driver)
+        {
+            driver.FindElement(By.Id("userNavigationLabel")).Click();
+            Thread.Sleep(2000);
+            try
+            {
+                buttonClick(driver, "//div[@class='uiScrollableAreaContent']//a", "Log out");
+            }
+            catch (Exception)
+            {
+                //buttonClick(driver, "//div[@class='uiScrollableAreaContent']//a", "Log Out");
+                driver.FindElement(By.XPath("//li[@class='_54ni navSubmenu __MenuItem']")).Click();
+            }
+            Thread.Sleep(500);
+            driver.FindElement(By.Id("email")).SendKeys(Keys.Control + "a"); ;
+            Thread.Sleep(500);
+            driver.FindElement(By.Id("email")).SendKeys(Keys.Delete);
+            Thread.Sleep(500);
         }
         // new tab
         public void newTab(IWebDriver driver, string url)
@@ -136,7 +157,20 @@ namespace Be_connect.co.il
                 {
                 }
             }
-
+            // upload video                    
+            try
+            {
+                IWebElement fileUpload = postDriver.FindElement(By.XPath("//input[@data-testid='media-sprout']"));
+                Thread.Sleep(1000);
+                fileUpload.SendKeys(Settings.Default["videoFile"].ToString());
+                while (true)
+                {
+                    try { fileUpload = postDriver.FindElement(By.XPath("//input[@data-testid='media-sprout']")); } catch (Exception) { }
+                    Thread.Sleep(500);
+                    break;
+                }
+            }
+            catch (Exception) { }
             // upload image   
             try
             {
@@ -214,6 +248,22 @@ namespace Be_connect.co.il
             catch (Exception)
             {
             }
+
+            // upload video   
+            try
+            {
+                IWebElement fileUpload = postDriver.FindElement(By.XPath("//input[@data-testid='add-more-photos']"));
+                System.Threading.Thread.Sleep(1000);
+                fileUpload.SendKeys(Settings.Default["videoFile"].ToString());
+                while (true)
+                {
+                    try { fileUpload = postDriver.FindElement(By.XPath("//input[@data-testid='add-more-photos']")); } catch (Exception) { }
+                    System.Threading.Thread.Sleep(500);
+                    break;
+                }
+            }
+            catch (Exception) { }
+
             // upload image   
             try
             {

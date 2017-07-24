@@ -63,16 +63,22 @@ namespace Be_connect.co.il
         {
             CFacebook fb = new CFacebook();
             CFormControl fc = new CFormControl();
-            fc.FormText("Starting");
-            navigator = fb.googleChrome();
-            fc.FormText("Login Facebook");
-            fb.facebookLogin(navigator, UC_Account.Instance.username, UC_Account.Instance.userpass);
-            fc.FormText("");
-            fb.gotoUrl(navigator, LikePostUrl.Text);
-            fc.FormText("Liking post");
-            fb.likeComments(navigator, commentText.Text);
-            fc.FormText("");
-            //Stop();
+            
+
+            DataGridView dataGridView = UC_Account.Instance.facebookAccount;
+            for (int i = 0; i < dataGridView.Rows.Count; i++)
+            {
+                navigator = fb.googleChrome();
+                fb.facebookLogin(navigator, dataGridView.Rows[i].Cells[1].Value.ToString(), dataGridView.Rows[i].Cells[3].Value.ToString());
+                fc.FormText("");
+                fb.gotoUrl(navigator, LikePostUrl.Text);
+                fc.FormText("Liking post");
+                fb.likeComments(navigator, commentText.Text);
+                fc.FormText("");
+                navigator.Quit();
+                
+            }
+            Stop();
         }
 
 

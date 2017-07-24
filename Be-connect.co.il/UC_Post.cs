@@ -32,6 +32,13 @@ namespace Be_connect.co.il
             PoatUrl.Text = Settings.Default["PoatUrl"].ToString();
             writePost.Text = Settings.Default["writePost"].ToString();
             imageListLoad();
+            try
+            {
+                axWindowsMediaPlayer1.URL = Settings.Default["videoFile"].ToString();
+            }
+            catch (Exception)
+            {
+            }
         }
 
         private void photoSelect_Click(object sender, EventArgs e)
@@ -150,25 +157,64 @@ namespace Be_connect.co.il
             CFormControl fc = new CFormControl();
             fc.FormText("Starting");
 
-            navigator = fb.googleChrome();
-            fc.FormText("Login Facebook");
-            fb.facebookLogin(navigator, UC_Account.Instance.username, UC_Account.Instance.userpass);
-            if (PoatUrl.Text.Contains("groups"))
+            
+            DataGridView dataGridView = UC_Account.Instance.facebookAccount;
+            for (int i = 0; i < dataGridView.Rows.Count; i++)
             {
-                fc.FormText("Go to Group");
-                fb.gotoUrl(navigator, PoatUrl.Text);
-                fc.FormText("Posting");
-                fb.groupPost(navigator, writePost.Text);
+                navigator = fb.googleChrome();
+                fb.facebookLogin(navigator, dataGridView.Rows[i].Cells[1].Value.ToString(), dataGridView.Rows[i].Cells[3].Value.ToString());
+                if (PoatUrl.Text.Contains("groups"))
+                {
+                    fc.FormText("Go to Group");
+                    fb.gotoUrl(navigator, PoatUrl.Text);
+                    fc.FormText("Posting");
+                    fb.groupPost(navigator, writePost.Text);
+                }
+                else
+                {
+                    fc.FormText("Go to Page");
+                    fb.gotoUrl(navigator, PoatUrl.Text);
+                    fc.FormText("Posting");
+                    fb.pagePost(navigator, writePost.Text);
+                }
+                fc.FormText("");
+                navigator.Quit();
+                Stop();
             }
-            else
+            
+        }
+
+        private void videoSelect_Click(object sender, EventArgs e)
+        {
+            contextMenuStrip2.Show(videoSelect, 0, 23);
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog theDialog = new OpenFileDialog();
+            theDialog.Title = "Open Video file";
+            theDialog.Filter = "All files|*.*";
+            theDialog.Multiselect = false;
+            if (theDialog.ShowDialog() == DialogResult.OK)
             {
-                fc.FormText("Go to Page");
-                fb.gotoUrl(navigator, PoatUrl.Text);
-                fc.FormText("Posting");
-                fb.pagePost(navigator, writePost.Text);
+                try
+                {
+                    string path = Path.GetFullPath(theDialog.FileName);
+                    Settings.Default["videoFile"] = path;
+                    Settings.Default.Save();
+                    axWindowsMediaPlayer1.URL = path;
+                }
+                catch (Exception)
+                {
+                }
             }
-            fc.FormText("");
-            Stop();
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            axWindowsMediaPlayer1.URL = null;
+            Settings.Default["videoFile"] = "";
+            Settings.Default.Save();
         }
     }
 }

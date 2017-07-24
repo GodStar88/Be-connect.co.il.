@@ -142,5 +142,29 @@ namespace Be_connect.co.il.Properties {
                 this["commentText"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string videoFile {
+            get {
+                return ((string)(this["videoFile"]));
+            }
+            set {
+                this["videoFile"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string AccountList {
+            get {
+                return ((string)(this["AccountList"]));
+            }
+            set {
+                this["AccountList"] = value;
+            }
+        }
     }
 }

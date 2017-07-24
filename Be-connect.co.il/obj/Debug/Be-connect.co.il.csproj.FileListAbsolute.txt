@@ -15,3 +15,8 @@ E:\Work\VC\Bot\Facebook\Be-connect.co.il\Be-connect.co.il\bin\Debug\WebDriver.xm
 E:\Work\VC\Bot\Facebook\Be-connect.co.il\Be-connect.co.il\obj\Debug\Be_connect.co.il.UC_Post.resources
 E:\Work\VC\Bot\Facebook\Be-connect.co.il\Be-connect.co.il\obj\Debug\Be_connect.co.il.UC_Event.resources
 E:\Work\VC\Bot\Facebook\Be-connect.co.il\Be-connect.co.il\obj\Debug\Be_connect.co.il.UC_LikePost.resources
+E:\Work\VC\Bot\Facebook\Be-connect.co.il\Be-connect.co.il\obj\Debug\Interop.WMPLib.dll
+E:\Work\VC\Bot\Facebook\Be-connect.co.il\Be-connect.co.il\obj\Debug\AxInterop.WMPLib.dll
+E:\Work\VC\Bot\Facebook\Be-connect.co.il\Be-connect.co.il\obj\Debug\Be-connect.co.il.csproj.ResolveComReference.cache
+E:\Work\VC\Bot\Facebook\Be-connect.co.il\Be-connect.co.il\bin\Debug\Interop.WMPLib.dll
+E:\Work\VC\Bot\Facebook\Be-connect.co.il\Be-connect.co.il\bin\Debug\AxInterop.WMPLib.dll
