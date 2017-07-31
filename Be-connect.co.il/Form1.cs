@@ -46,6 +46,7 @@ namespace Be_connect.co.il
             uC_LikePage1.Visible = false;
             uC_Post1.Visible = false;
             uC_LikePost1.Visible = false;
+            uC_Invite1.Visible = false;
             uC_Account1.Show();
         }
 
@@ -57,6 +58,7 @@ namespace Be_connect.co.il
             uC_Account1.Visible = false;
             uC_Post1.Visible = false;
             uC_LikePage1.Visible = false;
+            uC_Invite1.Visible = false;
             uC_LikePost1.Show();
         }
 
@@ -68,6 +70,7 @@ namespace Be_connect.co.il
             uC_Account1.Visible = false;
             uC_Post1.Visible = false;
             uC_LikePost1.Visible = false;
+            uC_Invite1.Visible = false;
             uC_LikePage1.Show();
 
         }
@@ -80,6 +83,7 @@ namespace Be_connect.co.il
             uC_LikePage1.Visible = false;
             uC_Post1.Visible = false;
             uC_LikePost1.Visible = false;
+            uC_Invite1.Visible = false;
             uC_Event1.Show();
         }
 
@@ -91,7 +95,20 @@ namespace Be_connect.co.il
             uC_LikePage1.Visible = false;
             uC_Event1.Visible = false;
             uC_LikePost1.Visible = false;
+            uC_Invite1.Visible = false;
             uC_Post1.Show();
+        }
+
+        private void btn_tab6_Click(object sender, EventArgs e)
+        {
+            bunifuSeparator.Width = btn_tab6.Width;
+            bunifuSeparator.Left = btn_tab6.Left;
+            uC_Account1.Visible = false;
+            uC_LikePage1.Visible = false;
+            uC_Event1.Visible = false;
+            uC_LikePost1.Visible = false;
+            uC_Post1.Visible = false;
+            uC_Invite1.Show();
         }
     }
 }

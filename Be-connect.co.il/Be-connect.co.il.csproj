@@ -81,6 +81,12 @@
     <Compile Include="UC_Event.Designer.cs">
       <DependentUpon>UC_Event.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_Invite.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Invite.Designer.cs">
+      <DependentUpon>UC_Invite.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_LikePage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -116,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Event.resx">
       <DependentUpon>UC_Event.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Invite.resx">
+      <DependentUpon>UC_Invite.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_LikePage.resx">
       <DependentUpon>UC_LikePage.cs</DependentUpon>

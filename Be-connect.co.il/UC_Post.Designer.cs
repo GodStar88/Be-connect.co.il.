@@ -114,6 +114,7 @@
             // PoatUrl
             // 
             this.PoatUrl.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.PoatUrl.Enabled = false;
             this.PoatUrl.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.PoatUrl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.PoatUrl.HintForeColor = System.Drawing.Color.Empty;
@@ -128,7 +129,7 @@
             this.PoatUrl.Name = "PoatUrl";
             this.PoatUrl.Size = new System.Drawing.Size(446, 30);
             this.PoatUrl.TabIndex = 132;
-            this.PoatUrl.Text = "https://www.facebook.com/homeownerwashere/";
+            this.PoatUrl.Text = "https://www.facebook.com";
             this.PoatUrl.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.PoatUrl.OnValueChanged += new System.EventHandler(this.PoatUrl_OnValueChanged);
             // 
@@ -228,19 +229,19 @@
             this.toolStripMenuItem1,
             this.toolStripMenuItem2});
             this.contextMenuStrip2.Name = "contextMenuStrip1";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(153, 70);
+            this.contextMenuStrip2.Size = new System.Drawing.Size(104, 48);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(103, 22);
             this.toolStripMenuItem1.Text = "Open";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(103, 22);
             this.toolStripMenuItem2.Text = "Clear";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 

@@ -50,6 +50,8 @@
             this.uC_Account1 = new Be_connect.co.il.UC_Account();
             this.uC_Event1 = new Be_connect.co.il.UC_Event();
             this.uC_LikePost1 = new Be_connect.co.il.UC_LikePost();
+            this.btn_tab6 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.uC_Invite1 = new Be_connect.co.il.UC_Invite();
             this.panel_Header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Minimum)).BeginInit();
@@ -149,6 +151,7 @@
             // panel_Tab
             // 
             this.panel_Tab.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel_Tab.Controls.Add(this.btn_tab6);
             this.panel_Tab.Controls.Add(this.btn_tab5);
             this.panel_Tab.Controls.Add(this.btn_tab4);
             this.panel_Tab.Controls.Add(this.btn_tab3);
@@ -273,11 +276,32 @@
             this.uC_LikePost1.Size = new System.Drawing.Size(800, 525);
             this.uC_LikePost1.TabIndex = 6;
             // 
+            // btn_tab6
+            // 
+            this.btn_tab6.AutoSize = true;
+            this.btn_tab6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_tab6.ForeColor = System.Drawing.Color.Black;
+            this.btn_tab6.Location = new System.Drawing.Point(532, 9);
+            this.btn_tab6.Name = "btn_tab6";
+            this.btn_tab6.Size = new System.Drawing.Size(90, 16);
+            this.btn_tab6.TabIndex = 9;
+            this.btn_tab6.Text = "Inviting Friend";
+            this.btn_tab6.Click += new System.EventHandler(this.btn_tab6_Click);
+            // 
+            // uC_Invite1
+            // 
+            this.uC_Invite1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.uC_Invite1.Location = new System.Drawing.Point(0, 2700);
+            this.uC_Invite1.Name = "uC_Invite1";
+            this.uC_Invite1.Size = new System.Drawing.Size(800, 525);
+            this.uC_Invite1.TabIndex = 7;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 600);
+            this.Controls.Add(this.uC_Invite1);
             this.Controls.Add(this.uC_LikePost1);
             this.Controls.Add(this.uC_Event1);
             this.Controls.Add(this.uC_Post1);
@@ -323,6 +347,8 @@
         private UC_Post uC_Post1;
         private UC_Event uC_Event1;
         private UC_LikePost uC_LikePost1;
+        private UC_Invite uC_Invite1;
+        private Bunifu.Framework.UI.BunifuCustomLabel btn_tab6;
     }
 }
 

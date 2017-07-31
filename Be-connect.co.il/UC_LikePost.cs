@@ -30,13 +30,11 @@ namespace Be_connect.co.il
 
         private void commentText_TextChanged(object sender, EventArgs e)
         {
-            Settings.Default["commentText"] = commentText.Text;
             Settings.Default.Save();
         }
         private void UC_LikePost_Load(object sender, EventArgs e)
         {
             LikePostUrl.Text = Settings.Default["LikePostUrl"].ToString();
-            commentText.Text = Settings.Default["commentText"].ToString();
         }
         private void btn_Start_Click(object sender, EventArgs e)
         {
@@ -68,14 +66,18 @@ namespace Be_connect.co.il
             DataGridView dataGridView = UC_Account.Instance.facebookAccount;
             for (int i = 0; i < dataGridView.Rows.Count; i++)
             {
-                navigator = fb.googleChrome();
-                fb.facebookLogin(navigator, dataGridView.Rows[i].Cells[1].Value.ToString(), dataGridView.Rows[i].Cells[3].Value.ToString());
-                fc.FormText("");
-                fb.gotoUrl(navigator, LikePostUrl.Text);
-                fc.FormText("Liking post");
-                fb.likeComments(navigator, commentText.Text);
-                fc.FormText("");
-                navigator.Quit();
+                if (Convert.ToBoolean(dataGridView.Rows[i].Cells[0].Value))
+                {
+                    navigator = fb.googleChrome();
+                    fb.facebookLogin(navigator, dataGridView.Rows[i].Cells[1].Value.ToString(), dataGridView.Rows[i].Cells[3].Value.ToString());
+                    fb.gotoUrl(navigator, LikePostUrl.Text);
+                    // fb.gotoUrl(navigator, "https://www.facebook.com/igordro/posts/10210930281467745?comment_id=10210930691077985&comment_tracking=%7Btn%3AR1%7D");
+
+                    fc.FormText("Liking post");
+                    fb.likeComments(navigator);
+                    fc.FormText("");
+                    navigator.Quit();
+                }
                 
             }
             Stop();

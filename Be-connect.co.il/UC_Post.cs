@@ -23,13 +23,10 @@ namespace Be_connect.co.il
 
         private void PoatUrl_OnValueChanged(object sender, EventArgs e)
         {
-            Settings.Default["PoatUrl"] = PoatUrl.Text;
-            Settings.Default.Save();
         }
 
         private void UC_Post_Load(object sender, EventArgs e)
         {
-            PoatUrl.Text = Settings.Default["PoatUrl"].ToString();
             writePost.Text = Settings.Default["writePost"].ToString();
             imageListLoad();
             try
@@ -161,25 +158,20 @@ namespace Be_connect.co.il
             DataGridView dataGridView = UC_Account.Instance.facebookAccount;
             for (int i = 0; i < dataGridView.Rows.Count; i++)
             {
-                navigator = fb.googleChrome();
-                fb.facebookLogin(navigator, dataGridView.Rows[i].Cells[1].Value.ToString(), dataGridView.Rows[i].Cells[3].Value.ToString());
-                if (PoatUrl.Text.Contains("groups"))
+                if (Convert.ToBoolean(dataGridView.Rows[i].Cells[0].Value))
                 {
-                    fc.FormText("Go to Group");
-                    fb.gotoUrl(navigator, PoatUrl.Text);
+                    navigator = fb.googleChrome();
+                    fb.facebookLogin(navigator, dataGridView.Rows[i].Cells[1].Value.ToString(), dataGridView.Rows[i].Cells[3].Value.ToString());
+
+                    fb.gotoUrl(navigator, "https://www.facebook.com/");
                     fc.FormText("Posting");
                     fb.groupPost(navigator, writePost.Text);
+
+                    fc.FormText("");
+                    navigator.Quit();
                 }
-                else
-                {
-                    fc.FormText("Go to Page");
-                    fb.gotoUrl(navigator, PoatUrl.Text);
-                    fc.FormText("Posting");
-                    fb.pagePost(navigator, writePost.Text);
-                }
-                fc.FormText("");
-                navigator.Quit();
                 Stop();
+                    
             }
             
         }

@@ -34,8 +34,6 @@
             this.btn_Start = new Bunifu.Framework.UI.BunifuImageButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.LikePostUrl = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.commentText = new System.Windows.Forms.TextBox();
-            this.label = new Bunifu.Framework.UI.BunifuCustomLabel();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Stop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Start)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -112,32 +110,10 @@
             this.LikePostUrl.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.LikePostUrl.OnValueChanged += new System.EventHandler(this.LikePostUrl_OnValueChanged);
             // 
-            // commentText
-            // 
-            this.commentText.Location = new System.Drawing.Point(145, 209);
-            this.commentText.Multiline = true;
-            this.commentText.Name = "commentText";
-            this.commentText.Size = new System.Drawing.Size(502, 70);
-            this.commentText.TabIndex = 136;
-            this.commentText.TextChanged += new System.EventHandler(this.commentText_TextChanged);
-            // 
-            // label
-            // 
-            this.label.AutoSize = true;
-            this.label.Font = new System.Drawing.Font("Century Gothic", 11F);
-            this.label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(140)))), ((int)(((byte)(127)))));
-            this.label.Location = new System.Drawing.Point(141, 177);
-            this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(81, 20);
-            this.label.TabIndex = 137;
-            this.label.Text = "Comment";
-            // 
             // UC_LikePost
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label);
-            this.Controls.Add(this.commentText);
             this.Controls.Add(this.bunifuCustomLabel2);
             this.Controls.Add(this.btn_Stop);
             this.Controls.Add(this.btn_Start);
@@ -161,7 +137,5 @@
         private Bunifu.Framework.UI.BunifuImageButton btn_Start;
         private System.Windows.Forms.PictureBox pictureBox2;
         private Bunifu.Framework.UI.BunifuMaterialTextbox LikePostUrl;
-        private System.Windows.Forms.TextBox commentText;
-        private Bunifu.Framework.UI.BunifuCustomLabel label;
     }
 }

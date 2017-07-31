@@ -65,14 +65,16 @@ namespace Be_connect.co.il
             DataGridView dataGridView = UC_Account.Instance.facebookAccount;
             for (int i = 0; i < dataGridView.Rows.Count; i++)
             {
-                navigator = fb.googleChrome();
-                fb.facebookLogin(navigator, dataGridView.Rows[i].Cells[1].Value.ToString(), dataGridView.Rows[i].Cells[3].Value.ToString());
-                fc.FormText("Go to Group");
-                fb.gotoUrl(navigator, EventUrl.Text);
-                fb.joinEvent(navigator);
-                fc.FormText("");
-                navigator.Quit();
-                
+                if (Convert.ToBoolean(dataGridView.Rows[i].Cells[0].Value))
+                {
+                    navigator = fb.googleChrome();
+                    fb.facebookLogin(navigator, dataGridView.Rows[i].Cells[1].Value.ToString(), dataGridView.Rows[i].Cells[3].Value.ToString());
+                    fc.FormText("Go to Event");
+                    fb.gotoUrl(navigator, EventUrl.Text);
+                    fb.joinEvent(navigator);
+                    fc.FormText("");
+                    navigator.Quit();
+                }                
             }
             Stop();
         }

@@ -1,0 +1,4 @@
+<project outputDir="E:\Work\VC\Bot\Facebook\Be-connect.co.il\setup\Confused" baseDir="E:\Work\VC\Bot\Facebook\Be-connect.co.il\setup" xmlns="http://confuser.codeplex.com">
+  <packer id="compressor" />
+  <module path="Be-connect.co.il.exe" />
+</project>

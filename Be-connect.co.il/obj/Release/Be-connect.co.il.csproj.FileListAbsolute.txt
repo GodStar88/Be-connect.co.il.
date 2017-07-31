@@ -20,3 +20,4 @@ E:\Work\VC\Bot\Facebook\Be-connect.co.il\Be-connect.co.il\obj\Release\AxInterop.
 E:\Work\VC\Bot\Facebook\Be-connect.co.il\Be-connect.co.il\obj\Release\Be-connect.co.il.csproj.ResolveComReference.cache
 E:\Work\VC\Bot\Facebook\Be-connect.co.il\Be-connect.co.il\bin\Release\Interop.WMPLib.dll
 E:\Work\VC\Bot\Facebook\Be-connect.co.il\Be-connect.co.il\bin\Release\AxInterop.WMPLib.dll
+E:\Work\VC\Bot\Facebook\Be-connect.co.il\Be-connect.co.il\obj\Release\Be_connect.co.il.UC_Invite.resources

@@ -109,32 +109,12 @@ namespace Be_connect.co.il
         // Post in group
         public void groupPost(IWebDriver postDriver, string write)
         {
-            try
-            {
-                var buttons = postDriver.FindElements(By.XPath("//span[@class='_2yav']"));
-                foreach (var item in buttons)
-                {
-                    if (item.Text == "Discussion")
-                    {
-                        item.Click();
-                        break;
-                    }
-                }
-            }
-            catch (Exception)
-            {
-            }
+
             System.Threading.Thread.Sleep(500);
             // click 'Write Post' and input post text
             try
             {
-                postDriver.FindElement(By.XPath("//a[@data-tooltip-content='Write Post']")).Click();
-                System.Threading.Thread.Sleep(500);
-            }
-            catch (Exception) { }
-            try
-            {
-                postDriver.FindElement(By.XPath("//a[@data-tooltip-content='Write Post']")).Click();
+                postDriver.FindElement(By.XPath("//span[@class='uiIconText _5qtp']")).Click();
                 System.Threading.Thread.Sleep(8000);
             }
             catch (Exception) { }
@@ -303,89 +283,56 @@ namespace Be_connect.co.il
         // join event
         public void joinEvent(IWebDriver driver)
         {
-            buttonClick(driver, "//span[@class='_2yav']", "Events");
-            System.Threading.Thread.Sleep(3000);
-            System.Threading.Thread.Sleep(3000);
-            int index = 1;
-            int check = 0;
-            for (int i = 0; i < 1000; i++)
+            try
             {
-                try
-                {
-
-                    string name = driver.FindElement(By.XPath("(//div[@class='uiProfileBlockContent'])[" + index.ToString() + "]")).Text;
-                    new CFormControl().FormText("Attending events");
-                    var buttons = driver.FindElements(By.XPath("(//div[@class='uiProfileBlockContent'])[" + index.ToString() + "]//a[@class='_42ft _4jy0 fbEventClassicButton _4jy3 _517h _51sy']"));
-                    index++;
-                    check = i;
-                    foreach (var button in buttons)
-                    {
-                        if (button.Text == "Join" || button.Text == "Going")
-                        {
-                            button.Click();
-                            System.Threading.Thread.Sleep(4000);
-                        }
-                    }
-                    new CFormControl().FormText("");
-                }
-                catch (Exception)
-                {
-                    try
-                    {
-                        driver.FindElement(By.XPath("//a[@class='pam uiBoxLightblue uiMorePagerPrimary']")).Click();
-                        System.Threading.Thread.Sleep(2000);
-                    }
-                    catch (Exception)
-                    {
-                    }
-                    if (check + 10 == i) break;
-                }
+                new CFormControl().FormText("Attending events");
+                buttonClick(driver, "//a[@class='_42ft _4jy0 _i8v _4jy4 _517h _51sy']", "Going");
             }
-            driver.Navigate().Refresh();
+            catch (Exception)
+            {
+            }
             new CFormControl().FormText("Success");
             System.Threading.Thread.Sleep(3000);
         }
         // Like comments
-        public void likeComments(IWebDriver driver, string msg)
+        public void likeComments(IWebDriver driver)
         {
-            buttonClick(driver, "//span[@class='_2yav']", "Discussion");
+            buttonClickAll(driver, "//a[@class='UFILikeLink _4x9- _4x9_ _48-k']", "Like");
+            buttonClickAll(driver, "//a[@class='UFILikeLink UFIReactionLink']", "Like");
+            new CFormControl().FormText("Success");
             System.Threading.Thread.Sleep(3000);
 
-            int index = 1;
-            int check = 0;
-            for (int i = 0; i < 10000; i++)
+        }
+        // Invite event
+        public void inviteEvent(IWebDriver driver)
+        {
+
+            try
             {
+                buttonClick(driver, "//span[@class='_55pe']", "Share");
+                Thread.Sleep(5000);
                 try
                 {
-                    var element = driver.FindElement(By.XPath("(//div[@class='_4-u2 mbm _4mrt _5jmm _5pat _5v3q _4-u8'])[" + index.ToString() + "]"));
-                    buttonClick(driver, "(//div[@class='_4-u2 mbm _4mrt _5jmm _5pat _5v3q _4-u8'])[" + index.ToString() + "]//a[@class='UFILikeLink _4x9- _4x9_ _48-k']", "Like");
-
-                    buttonClick(driver, "(//div[@class='_4-u2 mbm _4mrt _5jmm _5pat _5v3q _4-u8'])[" + index.ToString() + "]//a[@class='comment_link _5yxe']", "Comment");
-
-
-                    try
-                    {
-                        var textarea = driver.FindElements(By.XPath("(//div[@class='_4-u2 mbm _4mrt _5jmm _5pat _5v3q _4-u8'])[" + index.ToString() + "]//div[@class='_5yk2']"));
-                        textarea[0].SendKeys(msg);
-                        System.Threading.Thread.Sleep(500);
-                        textarea[0].SendKeys(Keys.Enter);
-                    }
-                    catch (Exception)
-                    {
-                    }
-
-                    buttonClick(driver, "(//div[@class='_4-u2 mbm _4mrt _5jmm _5pat _5v3q _4-u8'])[" + index.ToString() + "]//a[@class='UFIPagerLink']", "more comments");
-                    System.Threading.Thread.Sleep(3000);
-                    buttonClickAll(driver, "(//div[@class='_4-u2 mbm _4mrt _5jmm _5pat _5v3q _4-u8'])[" + index.ToString() + "]//a[@class='UFILikeLink UFIReactionLink']", "Like");
-                    index++;
-                    check = i;
+                    buttonClick(driver, "//a[@class='_54nc']", "Invite Friends");
+                    Thread.Sleep(2000);
                 }
                 catch (Exception)
                 {
-                    if (check + 5 == i) break;
-                    pageDown(driver);
+                    buttonClick(driver, "//a[@class='_54nc']", "Invite Friends");
+                    Thread.Sleep(2000);
                 }
-            }            
+                buttonClick(driver, "//div[@class='_ohf rfloat']", "Select All");
+                Thread.Sleep(3000);
+                driver.FindElement(By.XPath("//button[@class='_42ft _4jy0 layerConfirm uiOverlayButton _4jy3 _4jy1 selected _51sy']")).Click();
+                Thread.Sleep(1000);
+            }
+            catch (Exception)
+            {
+            }
+            new CFormControl().FormText("Success");
+            System.Threading.Thread.Sleep(3000);
+
+
         }
         public void buttonClick(IWebDriver driver, string element, string txt)
         {
