@@ -163,7 +163,7 @@ namespace Be_connect.co.il
                     navigator = fb.googleChrome();
                     fb.facebookLogin(navigator, dataGridView.Rows[i].Cells[1].Value.ToString(), dataGridView.Rows[i].Cells[3].Value.ToString());
 
-                    fb.gotoUrl(navigator, "https://www.facebook.com/");
+                    fb.gotoUrl(navigator, PoatUrl.Text);
                     fc.FormText("Posting");
                     fb.groupPost(navigator, writePost.Text);
 

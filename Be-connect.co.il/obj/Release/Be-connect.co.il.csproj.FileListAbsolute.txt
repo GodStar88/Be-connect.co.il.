@@ -21,3 +21,4 @@ E:\Work\VC\Bot\Facebook\Be-connect.co.il\Be-connect.co.il\obj\Release\Be-connect
 E:\Work\VC\Bot\Facebook\Be-connect.co.il\Be-connect.co.il\bin\Release\Interop.WMPLib.dll
 E:\Work\VC\Bot\Facebook\Be-connect.co.il\Be-connect.co.il\bin\Release\AxInterop.WMPLib.dll
 E:\Work\VC\Bot\Facebook\Be-connect.co.il\Be-connect.co.il\obj\Release\Be_connect.co.il.UC_Invite.resources
+E:\Work\VC\Bot\Facebook\Be-connect.co.il\Be-connect.co.il\obj\Release\Be_connect.co.il.FrmLogin.resources

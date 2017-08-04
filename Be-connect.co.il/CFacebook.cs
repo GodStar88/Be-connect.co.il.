@@ -295,10 +295,11 @@ namespace Be_connect.co.il
             System.Threading.Thread.Sleep(3000);
         }
         // Like comments
-        public void likeComments(IWebDriver driver)
+        public void likeComments(IWebDriver driver, bool comments)
         {
             buttonClickAll(driver, "//a[@class='UFILikeLink _4x9- _4x9_ _48-k']", "Like");
-            buttonClickAll(driver, "//a[@class='UFILikeLink UFIReactionLink']", "Like");
+            if (comments)
+              buttonClickAll(driver, "//a[@class='UFILikeLink UFIReactionLink']", "Like");
             new CFormControl().FormText("Success");
             System.Threading.Thread.Sleep(3000);
 

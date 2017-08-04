@@ -72,9 +72,9 @@ namespace Be_connect.co.il
                     fb.facebookLogin(navigator, dataGridView.Rows[i].Cells[1].Value.ToString(), dataGridView.Rows[i].Cells[3].Value.ToString());
                     fb.gotoUrl(navigator, LikePostUrl.Text);
                     // fb.gotoUrl(navigator, "https://www.facebook.com/igordro/posts/10210930281467745?comment_id=10210930691077985&comment_tracking=%7Btn%3AR1%7D");
-
+                    
                     fc.FormText("Liking post");
-                    fb.likeComments(navigator);
+                    fb.likeComments(navigator, Convert.ToBoolean(bunifuSwitch_Comments.Value));
                     fc.FormText("");
                     navigator.Quit();
                 }

@@ -39,6 +39,7 @@
             this.btn_Close = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.panel_Tab = new System.Windows.Forms.Panel();
+            this.btn_tab6 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btn_tab5 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btn_tab4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btn_tab3 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -50,7 +51,6 @@
             this.uC_Account1 = new Be_connect.co.il.UC_Account();
             this.uC_Event1 = new Be_connect.co.il.UC_Event();
             this.uC_LikePost1 = new Be_connect.co.il.UC_LikePost();
-            this.btn_tab6 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.uC_Invite1 = new Be_connect.co.il.UC_Invite();
             this.panel_Header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoIcon)).BeginInit();
@@ -164,6 +164,18 @@
             this.panel_Tab.Size = new System.Drawing.Size(800, 35);
             this.panel_Tab.TabIndex = 1;
             // 
+            // btn_tab6
+            // 
+            this.btn_tab6.AutoSize = true;
+            this.btn_tab6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_tab6.ForeColor = System.Drawing.Color.Black;
+            this.btn_tab6.Location = new System.Drawing.Point(532, 9);
+            this.btn_tab6.Name = "btn_tab6";
+            this.btn_tab6.Size = new System.Drawing.Size(90, 16);
+            this.btn_tab6.TabIndex = 9;
+            this.btn_tab6.Text = "Inviting Friend";
+            this.btn_tab6.Click += new System.EventHandler(this.btn_tab6_Click);
+            // 
             // btn_tab5
             // 
             this.btn_tab5.AutoSize = true;
@@ -276,18 +288,6 @@
             this.uC_LikePost1.Size = new System.Drawing.Size(800, 525);
             this.uC_LikePost1.TabIndex = 6;
             // 
-            // btn_tab6
-            // 
-            this.btn_tab6.AutoSize = true;
-            this.btn_tab6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_tab6.ForeColor = System.Drawing.Color.Black;
-            this.btn_tab6.Location = new System.Drawing.Point(532, 9);
-            this.btn_tab6.Name = "btn_tab6";
-            this.btn_tab6.Size = new System.Drawing.Size(90, 16);
-            this.btn_tab6.TabIndex = 9;
-            this.btn_tab6.Text = "Inviting Friend";
-            this.btn_tab6.Click += new System.EventHandler(this.btn_tab6_Click);
-            // 
             // uC_Invite1
             // 
             this.uC_Invite1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -314,6 +314,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Be-connect.co.il.";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel_Header.ResumeLayout(false);
             this.panel_Header.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoIcon)).EndInit();

@@ -55,8 +55,8 @@ namespace Be_connect.co.il
                     navigator = fb.googleChrome();
                     fb.facebookLogin(navigator, dataGridView.Rows[i].Cells[1].Value.ToString(), dataGridView.Rows[i].Cells[3].Value.ToString());
                     fc.FormText("Go to Event");
-                    fb.gotoUrl(navigator, InviteUrl.Text);
-                    //fb.gotoUrl(navigator, "https://www.facebook.com/events/1675776565790551");
+                    // fb.gotoUrl(navigator, InviteUrl.Text);
+                    fb.gotoUrl(navigator, "https://www.facebook.com/events/1675776565790551");
                     fb.inviteEvent(navigator);
                     fc.FormText("");
                     navigator.Quit();

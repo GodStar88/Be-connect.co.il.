@@ -110,5 +110,12 @@ namespace Be_connect.co.il
             uC_Post1.Visible = false;
             uC_Invite1.Show();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            // FrmLogin login = new FrmLogin();
+            // login.ShowDialog();
+            // this.ShowInTaskbar = false;
+        }
     }
 }

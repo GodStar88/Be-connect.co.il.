@@ -34,6 +34,8 @@
             this.btn_Start = new Bunifu.Framework.UI.BunifuImageButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.LikePostUrl = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.bunifuSwitch_Comments = new Bunifu.Framework.UI.BunifuSwitch();
+            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Stop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Start)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -110,10 +112,38 @@
             this.LikePostUrl.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.LikePostUrl.OnValueChanged += new System.EventHandler(this.LikePostUrl_OnValueChanged);
             // 
+            // bunifuSwitch_Comments
+            // 
+            this.bunifuSwitch_Comments.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bunifuSwitch_Comments.BorderRadius = 0;
+            this.bunifuSwitch_Comments.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuSwitch_Comments.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.bunifuSwitch_Comments.Location = new System.Drawing.Point(256, 201);
+            this.bunifuSwitch_Comments.Name = "bunifuSwitch_Comments";
+            this.bunifuSwitch_Comments.Oncolor = System.Drawing.Color.SeaGreen;
+            this.bunifuSwitch_Comments.Onoffcolor = System.Drawing.Color.DarkGray;
+            this.bunifuSwitch_Comments.Size = new System.Drawing.Size(51, 19);
+            this.bunifuSwitch_Comments.TabIndex = 136;
+            this.bunifuSwitch_Comments.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.bunifuSwitch_Comments.Value = true;
+            // 
+            // bunifuCustomLabel1
+            // 
+            this.bunifuCustomLabel1.AutoSize = true;
+            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.Red;
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(142, 203);
+            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(91, 16);
+            this.bunifuCustomLabel1.TabIndex = 137;
+            this.bunifuCustomLabel1.Text = "Like  Comments";
+            // 
             // UC_LikePost
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.bunifuCustomLabel1);
+            this.Controls.Add(this.bunifuSwitch_Comments);
             this.Controls.Add(this.bunifuCustomLabel2);
             this.Controls.Add(this.btn_Stop);
             this.Controls.Add(this.btn_Start);
@@ -137,5 +167,7 @@
         private Bunifu.Framework.UI.BunifuImageButton btn_Start;
         private System.Windows.Forms.PictureBox pictureBox2;
         private Bunifu.Framework.UI.BunifuMaterialTextbox LikePostUrl;
+        private Bunifu.Framework.UI.BunifuSwitch bunifuSwitch_Comments;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
     }
 }

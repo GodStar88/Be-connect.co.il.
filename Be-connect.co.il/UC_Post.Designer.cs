@@ -114,7 +114,6 @@
             // PoatUrl
             // 
             this.PoatUrl.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.PoatUrl.Enabled = false;
             this.PoatUrl.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.PoatUrl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.PoatUrl.HintForeColor = System.Drawing.Color.Empty;
